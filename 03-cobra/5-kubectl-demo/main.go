@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/dairongpeng/gcode/3-cobra/5-kubectl-demo/cmds"
+	"github.com/dairongpeng/gcode/03-cobra/5-kubectl-demo/cmds"
 )
 
 func main() {
