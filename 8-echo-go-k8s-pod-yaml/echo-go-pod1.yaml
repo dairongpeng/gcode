@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echo-go-pod1
+  labels:
+    app: echo-go
+spec:
+  containers:
+    - command:
+        - /home/app/echo-go
+        - -port
+        - '9090'
+      image: registry.cn-hangzhou.aliyuncs.com/dairongpeng-kubernetes/echo-go:1.0
+      imagePullPolicy: Always
+      name: echo-go
+      ports:
+        - containerPort: 9090
+          name: http
+          protocol: TCP
+      workingDir: /home/app/
