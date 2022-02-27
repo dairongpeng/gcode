@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-go-svc
+  labels:
+    app: echo-go
+spec:
+  ports:
+    - name: tcp-9090-9090-echo-go-http
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+  selector:
+    app: echo-go
+  type: NodePort
