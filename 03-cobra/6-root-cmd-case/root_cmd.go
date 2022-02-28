@@ -12,15 +12,14 @@ func init() {
 
 var Name string
 
-// Pod Create 命令
 var podCreateCmd = cobra.Command{
-	Use:   "create",
-	Short: "create a new pod",
+	Use:   "show-name",
+	Short: "show name",
 	Run: func(cmd *cobra.Command, args []string) {
 		if Name == "" {
 			cmd.Help()
 			return
 		}
-		fmt.Println("success!")
+		fmt.Println(Name)
 	},
 }
